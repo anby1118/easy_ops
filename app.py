@@ -37,11 +37,13 @@ def create_app(config=None):
             app.config.from_pyfile(config)
 
     # 注册蓝图
-    import router, models
+    import router, models, serializer
     router.init_app(app)
 
     # 将model注册到app
     models.init_app(app)
 
+    # 将序列化器注册到app
+    serializer.init_app(app)
     # 返回核心对象
     return app

@@ -9,4 +9,4 @@
 
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
-from . import data
+from . import data, school
